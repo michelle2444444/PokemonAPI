@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title class="header-title">Pokédex</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-searchbar
+    [(ngModel)]="search"
+    (ionInput)="onSearchChange()"
+    placeholder="Busca un Pokémon..."
+    color="light"
+  ></ion-searchbar>
+
+  <div *ngIf="searchResult" class="card-list">
+    <ion-card routerLink="/pokemon/{{ searchResult.name }}" class="pokemon-card">
+      <img
+        [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + searchResult.id + '.png'"
+        alt="{{ searchResult.name }}"
+      />
+      <ion-card-header>
+        <ion-card-title>{{ searchResult.name | titlecase }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <div *ngIf="!searchResult" class="card-list">
+    <ion-card
+      *ngFor="let pokemon of pokemons; let i = index"
+      [routerLink]="['/pokemon', pokemon.name]"
+      class="pokemon-card"
+    >
+      <img [src]="getImageUrl(i)" alt="{{ pokemon.name }}" />
+      <ion-card-header>
+        <ion-card-title>{{ pokemon.name | titlecase }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+</ion-content>

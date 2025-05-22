@@ -1,0 +1,70 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pokemon-card-ex {
+  width: 320px;
+  border-radius: 15px;
+  padding: 15px;
+  background: linear-gradient(145deg, #fbd4ff, #c5baff);
+  box-shadow: 0 0 20px rgba(150, 0, 255, 0.6);
+  border: 2px solid #7e00d4;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.card-header .ex {
+  color: #8400ff;
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: 1.1em;
+}
+
+.card-header .ps {
+  background: #f64bff;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.pokemon-image img {
+  width: 160px;
+  height: auto;
+  margin: 10px auto;
+  display: block;
+}
+
+.pokemon-info p {
+  margin: 4px 0;
+  font-size: 0.95em;
+}
+
+.ability {
+  color: #d400ff;
+  font-weight: bold;
+}
+
+.attack {
+  color: #008cff;
+  font-weight: bold;
+}
+
+.card-footer {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 0.85em;
+  color: #444;
+}

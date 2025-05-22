@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-title>{{ pokemon?.name | titlecase }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="pokemon">
+  <div class="card-container">
+    <div class="pokemon-card-ex">
+      <div class="card-header">
+        <h2>{{ pokemon.name | titlecase }}<span class="ex"></span></h2>
+        <span class="ps">PS {{ pokemon.base_experience }}</span>
+      </div>
+
+      <div class="pokemon-image">
+        <img [src]="pokemon.sprites.other['official-artwork'].front_default" [alt]="pokemon.name" />
+      </div>
+
+      <div class="pokemon-info">
+        <p><strong>Altura:</strong> {{ pokemon.height / 10 }} m</p>
+        <p><strong>Peso:</strong> {{ pokemon.weight / 10 }} kg</p>
+        <p><strong>Tipos:</strong> {{ typeNames }}</p>
+        <p><strong>Habilidad:</strong> <span class="ability">Desconocida</span></p>
+        <p><strong>Ataque:</strong> <span class="attack">Hackeo Genoma</span></p>
+      </div>
+
+      <div class="card-footer">
+        <p class="extra">Este Pokémon usa ataques especiales para copiar a otros.</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

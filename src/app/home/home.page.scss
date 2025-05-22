@@ -1,0 +1,40 @@
+.header-title {
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #222;
+  color: white;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.pokemon-card {
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+  border: 2px solid #aa00ff;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  margin: 12px auto 0;
+}
+
+ion-card-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #4a148c;
+  margin-top: 8px;
+  text-transform: capitalize;
+}
